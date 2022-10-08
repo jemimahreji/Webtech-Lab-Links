@@ -1,0 +1,82 @@
+#items li {
+    font-size: 20px;
+    padding: 10px;
+}
+
+#items li a {
+    color: rgb(54, 32, 105);
+    text-decoration: none;
+    font-family: "Balsamiq Sans";
+    font-weight: 800px;
+    border: none;
+    background: url("pics/s7.jfif");
+    border-radius: 4px;
+    padding: 5px;
+}
+
+#items li a:hover {
+    text-decoration: underline;
+    color: yellowgreen;
+}
+
+#nav {
+    list-style: none;
+}
+
+#nav li {
+    display: inline-block;
+    font-size: 20px;
+    /* margin-bottom: 30px; */
+    font-weight: 700;
+    position: relative;
+    bottom: 10px;
+    font-family: 'ubuntu';
+}
+
+#nav li a {
+    color: rgb(39, 12, 52);
+    text-decoration: none;
+    padding: 20px 45px;
+}
+
+#nav li a:hover {
+    text-decoration: underline;
+    color: rgb(234, 244, 233);
+}
+
+#nav li a.active {
+    color: rgb(246, 248, 245);
+}
+
+#nav li a img:hover {
+    width: 35px;
+
+
+}
+
+.invert_effect {
+    filter: invert(100%);
+
+}
+th,
+td {
+    border-bottom: 1px solid rgb(121, 115, 202);
+}
+td {
+    text-align: center;
+}
+.tab{
+    padding: 15px;
+    padding-right: 60px;
+    font-family: 'ubuntu';
+    font-size: 17px;
+    font-weight: 600;
+
+}
+#table{
+    position: relative;
+    display: inline-block;
+    position: relative;
+    left: 620px;
+    bottom: 560px;
+}

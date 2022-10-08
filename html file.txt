@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Stationery</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Kaushan+Script&family=Merienda&display=swap"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Caveat:wght@700&family=Courgette&family=Crimson+Text:wght@400;600&family=Indie+Flower&family=Merienda&family=Satisfy&family=Shadows+Into+Light&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="tech.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="tech.js"></script>
+  </head>
+  <body
+    style="background-image: url('pics/bg2.jpg'); background-repeat: no-repeat"
+  >
+    <header style="background-image: url('pics/i5.jpg')">
+      <center>
+        <h1
+          style="
+            font-family: ui-monospace, 'Merienda', Impact, Haettenschweiler,
+              'Arial Narrow Bold', sans-serif;
+            color: rgb(253, 200, 244);
+          "
+        >
+          Simply
+          <img src="pics/h1.svg" alt="" width="25px" height="15px" /> Sweet
+          Stationery
+        </h1>
+        <i
+          ><h3 style="font-family: ui-rounded; color: azure; font-size: 22px">
+            All that you need to make your world prettier!
+          </h3></i
+        >
+        <img src="pics/artist.png" width="100px" alt="" />
+      </center>
+    </header>
+     <div style="background-image: url(pics/s7.jfif); height: 50px; background-repeat: no-repeat; background-size: cover; border-radius: 7px; margin-top: 5px; border: 1px solid white;">
+        <ul id="nav">
+          <li class="nav-item"><a href="#">Home</a></li>
+          <li class="nav-item"><a href="#About">About</a></li>
+          <li class="nav-item"><a href="#">Services</a></li>
+          <li class="nav-item"><a href="#">Gallery</a></li>
+          <li class="nav-item"><a href="#footer">Contact</a></li>
+          <li>
+            <li><a href="#"><img src="pics/social-media.png" alt="" width="30px"> </a></li>
+                <li><a href="#"><img class="invert_effect" src="pics/instagram.png" width="30px" alt=""> </a></li>
+                <li><a href="#"><img class="invert_effect" src="pics/facebook.png" width="30px" alt=""> </a></li>
+                <li><a href="#"><img class="invert_effect" src="pics/whatsapp.png" width="30px" alt=""> </a></li>
+                <li><a href="#"><img class="invert_effect" src="pics/youtube.png" width="30px" alt=""> </a></li>
+          </li>
+        </ul>
+      </div>
+    <div
+      style="
+        margin-left: 10px;
+        margin-top: 30px;
+        background-color: rgba(240, 255, 255, 0.405);
+        width: 1000px;
+        height: 600px;
+        font-size: larger;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+          sans-serif;
+      "
+    >
+      <h2
+        style="
+          font-size: 27px;
+          padding-top: 1px;
+          margin: 0px;
+          margin-left: 50px;
+          font-family: 'Merienda';
+        "
+      >
+        Our Collection
+      </h2>
+      <ul id="items" style="font-family: 'ubuntu'">
+        <li><a href="#" id="i1" onclick="myfunction()">Designer Diaries <img src="pics/diary.png" alt="" width="45px"></a></li>
+        <li><a href="#" id="i2" onclick="myfunction()">Fancy NoteBooks <img src="pics/s4.svg" alt="" width="45px"></a></li></a></li>
+        <li><a href="#" id="i3" onclick="myfunction()">Pens and Pencils <img src="pics/s8.svg" alt="" width="45px"></a></li></a></li>
+        <li><a href="#" id="i4" onclick="myfunction()">Charts and sheets <img src="pics/handmade.png" alt="" width="45px"></a></li></a></li>
+        <li><a href="#" id="i5" onclick="myfunction()">Gift Packaging <img src="pics/cut-paper.png" alt="" width="45px"></a></li></a></li>
+        <li><a href="#" id="i6" onclick="myfunction()">Art Material <img src="pics/s5.svg" alt="" width="45px"></a></li></a></li>
+        <li><a href="#" id="i7" onclick="myfunction()">DIY <img src="pics/craft (1).png" alt="" width="45px"></a></li></a></li>
+        <li><a href="#" id="i8" onclick="myfunction()">mini kits and tools <img src="pics/craft.png" alt="" width="45px"width="15px"></a></li></a></li>
+        <li><a href="#" id="i9" onclick="myfunction()">Colours and Paints <img src="pics/s6.svg" alt="" width="45px"></a></li></a></li>
+        <li><a href="#" id="i10" onclick="myfunction()">Stickers and decorating materials <img src="pics/s1.svg" alt="" width="45px"></a></li></a></li>
+        <li><a href="#" id="i11" onclick="myfunction()">canvas <img src="pics/s3.svg" alt="" width="45px"></a></li></a></li>
+      </ul>
+    </div>
+    <div
+      style="
+        margin-left: 725px;
+        margin-top: -567px;
+        background-color: rgba(255, 228, 196, 0.671);
+        width: 500px;
+        padding: 30px;
+        padding-left: 100px;
+        padding-right: 0px;
+      "
+    >
+      <h2 style="font-size: 27px">The Widest range of stationery</h2>
+      <h3 style="font-size: 23px">Top picks</h3>
+      <h3 style="font-size: 25px">Explore our collection</h3>
+    </div>
+    <div style="background-color: rgba(255, 192, 203, 0.336); width: 600px; height: 600px;"></div>
+    
+    <div id="table">
+      <fieldset style="background-color: rgba(255, 255, 255, 0.452);">
+      <table id="cost">
+          <legend style="
+          font-size: 27px;
+          padding-top: 1px;
+          margin: 0px;
+          margin-left: 50px;
+          font-family: 'Merienda';
+        ">Your Order Details <br> <span style="letter-spacing: 4px; font-size: 15px; font-family: 'ubuntu';">Place your orders here</span></legend>      
+        <thead>
+          <tr>
+          <th style="font-size: 20px;" class="tab">SNo.</th>
+          <th style="font-size: 20px;" class="tab">Product</th>
+          <th style="font-size: 20px;" class="tab">Quantity</th>
+          <th style="font-size: 20px;" class="tab">Price(Rs.)</th>
+        </tr>
+        </thead>
+        <tbody id="tbody">
+        </tbody>   
+      </table>
+      <p id="total" style="font-weight: 700; font-size: 20px; margin-left: 10px;"></p>
+      </fieldset>
+    </div>
+    <center>
+      <div id="About" style="display: inline-block;font-family:  ui-monospace, 'Merienda', Impact, Haettenschweiler,
+              'Arial Narrow Bold', sans-serif; background-color: rgba(253, 255, 156, 0.39); padding: 20px; font-size: 18px; border-radius: 7px;">
+      Here at Simply Sweet we have the widest and best collection ever to  make your world prettier. <br><br>
+      We maintain excellent quality and eye-catching materials to bring out the best of your creativity. <br><br>
+      Check out these amazing engaging products.
+    </div>
+    </center>
+    
+    <footer id="footer"
+    style="background: url(pics/bg11.jpg); width: 100%; height: 250px; border-radius: 7px; background-repeat: no-repeat; background-size: cover;">
+    <div style="background-color: rgba(45, 9, 73, 0.426); width: 100%; height: 250px; border-radius: 7px;">
+    <h2 style="padding-left: 10px; padding-top: 10px;">Contact Us</h2>
+    <p style="font-size: 17px;margin-left: 10px; font-family: 'ubuntu';">
+      <center>
+        <span style="letter-spacing: 4px; font-weight: 200; font-size: 20px;">Available from Monday to Saturday</span>  <br><br>
+      <span style="letter-spacing: 7px; font-weight: 200; font-size: 18px;"> Get in touch</span>  <br><br>
+     
+      Phone No.: <a style="color: white;" href="tel: 9425366555">9425366555</a> 
+        <br>
+        Email: <a style="color: white;" href="mailto:jemikuruvilla7@gmail.com">simplysweetforu@gmail.com</a> 
+        <br>
+        <h3 
+          style="
+            font-family: ui-monospace, 'Merienda', Impact, Haettenschweiler,
+              'Arial Narrow Bold', sans-serif;
+              font-size: 20px;
+            color: rgb(255, 213, 249);
+          "
+        >
+          Simply
+          <img src="pics/h1.svg" alt="" width="25px" height="15px" /> Sweet
+          Stationery
+        </h3></center>
+    </p> 
+    </div>
+    </footer>
+  </body>
+</html>

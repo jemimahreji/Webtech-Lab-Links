@@ -1,0 +1,174 @@
+function myfunction(){
+    console.log("clicked")
+}
+$(document).ready(function(){
+    var count = 0
+    let count1=0, count2=0, count4=0, count5=0,count6=0,count7=0,count8=0,count9=0,count10=0,count11=0
+    let total1=0, total2=0, total3=0, total4=0, total5=0, total6=0, total7=0, total8=0, total9=0, total10=0, total11=0
+
+    $("#i1").click(function(){
+        count+=1
+        const c1 = count
+        count1 += 1;
+        total1 = 100*count1
+        if(count1===1){
+            $("#tbody").append(`<tr><td class="tab">${c1}</td> <td class="tab">Designer Diaries</td> <td class="tab" id='count1'>${count1}</td> <td class="tab" id='total1'>${total1}</td></tr>`)
+        }
+        if(count1>1){
+            $("#count1").html(count1)
+            $("#total1").html(total1)
+        }
+        let sum = total1+total2+total3+total4+total5+total6+total7+total8+total9+total10+total11
+        $("#total").html("Total cost: Rs."+ sum)
+    })
+    $("#i2").click(function(){
+        count+=1
+        const c2 = count
+        count2 += 1;
+        total2 = 150*count2
+        if(count2===1){
+            $("#tbody").append(`<tr><td class="tab">${c2}</td> <td class="tab">Fancy Notebooks</td> <td class="tab" id='count2'>${count2}</td> <td class="tab" id='total2'>${total2}</td></tr>`)
+        }
+        if(count2>1){
+            $("#count2").html(count2)
+            $("#total2").html(total2)
+        }
+        let sum = total1+total2+total3+total4+total5+total6+total7+total8+total9+total10+total11
+        $("#total").html("Total cost: Rs."+ sum)
+    })
+    $("#i3").click(function(){
+        count+=1
+        const c3 = count
+        count3 += 1;
+        total3 = 60*count3
+        if(count3===1){
+            $("#tbody").append(`<tr><td class="tab">${c3}</td> <td class="tab">Pens and Pencils</td> <td class="tab" id='count3'>${count3}</td> <td class="tab" id='total3'>${total3}</td></tr>`)
+        }
+        if(count3>1){
+            $("#count3").html(count3)
+            $("#total3").html(total3)
+        }
+        let sum = total1+total2+total3+total4+total5+total6+total7+total8+total9+total10+total11
+        $("#total").html("Total cost: Rs."+ sum)
+    })
+    $("#i4").click(function(){
+        count+=1
+        const c4 = count
+        count4+= 1;
+        total4 = 15*count4
+        if(count4===1){
+            $("#tbody").append(`<tr><td class="tab">${c4}</td> <td class="tab">Charts and sheets</td> <td class="tab" id='count4'>${count4}</td> <td class="tab" id='total4'>${total4}</td></tr>`)
+        }
+        if(count4>1){
+            $("#count4").html(count4)
+            $("#total4").html(total4)
+        }
+        let sum = total1+total2+total3+total4+total5+total6+total7+total8+total9+total10+total11
+        $("#total").html("Total cost: Rs."+ sum)
+    })
+    $("#i5").click(function(){
+        count+=1
+        const c5 = count
+        count5+= 1;
+        total5 = 250*count5
+        if(count5===1){
+            $("#tbody").append(`<tr><td class="tab">${c5}</td> <td class="tab">Gift Packaging</td> <td class="tab" id='count5'>${count5}</td> <td class="tab" id='total5'>${total5}</td></tr>`)
+        }
+        if(count5>1){
+            $("#count5").html(count5)
+            $("#total5").html(total5)
+        }
+        let sum = total1+total2+total3+total4+total5+total6+total7+total8+total9+total10+total11
+        $("#total").html("Total cost: Rs."+ sum)
+    })
+    $("#i6").click(function(){
+        count+=1
+        const c6 = count
+        count6+= 1;
+        total6 = 1050*count6
+        if(count6===1){
+            $("#tbody").append(`<tr><td class="tab">${c6}</td> <td class="tab">Art Material</td> <td class="tab" id='count6'>${count6}</td> <td class="tab" id='total6'>${total6}</td></tr>`)
+        }
+        if(count6>1){
+            $("#count6").html(count6)
+            $("#total6").html(total6)
+        }
+        let sum = total1+total2+total3+total4+total5+total6+total7+total8+total9+total10+total11
+        $("#total").html("Total cost: Rs."+ sum)
+    })
+    $("#i7").click(function(){
+        count+=1
+        const c7 = count
+        count7+= 1;
+        total7 = 3800*count7
+        if(count7===1){
+            $("#tbody").append(`<tr><td class="tab">${c7}</td> <td class="tab">DIY</td> <td class="tab" id='count7'>${count7}</td> <td class="tab" id='total7'>${total7}</td></tr>`)
+        }
+        if(count7>1){
+            $("#count7").html(count7)
+            $("#total7").html(total7)
+        }
+        let sum = total1+total2+total3+total4+total5+total6+total7+total8+total9+total10+total11
+        $("#total").html("Total cost: Rs."+ sum)
+    })
+    $("#i8").click(function(){
+        count+=1
+        const c8 = count
+        count8+= 1;
+        total8 = 1500*count8
+        if(count8===1){
+            $("#tbody").append(`<tr><td class="tab">${c8}</td> <td class="tab">Mini kits and tools</td> <td class="tab" id='count8'>${count8}</td> <td class="tab" id='total8'>${total8}</td></tr>`)
+        }
+        if(count8>1){
+            $("#count8").html(count8)
+            $("#total8").html(total8)
+        }
+        let sum = total1+total2+total3+total4+total5+total6+total7+total8+total9+total10+total11
+        $("#total").html("Total cost: Rs."+ sum)
+    })
+    $("#i9").click(function(){
+        count+=1
+        const c9 = count
+        count9+= 1;
+        total9 = 600*count9
+        if(count9===1){
+            $("#tbody").append(`<tr><td class="tab">${c9}</td> <td class="tab">Colours and Paints</td> <td class="tab" id='count9'>${count9}</td> <td class="tab" id='total9'>${total9}</td></tr>`)
+        }
+        if(count9>1){
+            $("#count9").html(count9)
+            $("#total9").html(total9)
+        }
+        let sum = total1+total2+total3+total4+total5+total6+total7+total8+total9+total10+total11
+        $("#total").html("Total cost: Rs."+ sum)
+    })
+    $("#i10").click(function(){
+        count+=1
+        const c10 = count
+        count10+= 1;
+        total10 = 250*count10
+        if(count10===1){
+            $("#tbody").append(`<tr><td class="tab">${c10}</td> <td class="tab">Stickers and decorating materials </td> <td class="tab" id='count10'>${count10}</td> <td class="tab" id='total10'>${total10}</td></tr>`)
+        }
+        if(count10>1){
+            $("#count10").html(count10)
+            $("#total10").html(total10)
+        }
+        let sum = total1+total2+total3+total4+total5+total6+total7+total8+total9+total10+total11
+        $("#total").html("Total cost: Rs."+ sum)
+    })
+    $("#i11").click(function(){
+        count+=1
+        const c11 = count
+        count11+= 1;
+        total11 = 450*count11
+        if(count11===1){
+            $("#tbody").append(`<tr><td class="tab">${c11}</td> <td class="tab">Canvas </td> <td class="tab" id='count11'>${count11}</td> <td class="tab" id='total11'>${total11}</td></tr>`)
+        }
+        if(count11>1){
+            $("#count11").html(count11)
+            $("#total11").html(total11)
+        }
+        let sum = total1+total2+total3+total4+total5+total6+total7+total8+total9+total10+total11
+        $("#total").html("Total cost: Rs."+ sum)
+    }) 
+})
