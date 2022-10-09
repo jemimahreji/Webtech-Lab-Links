@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM elements and events</title>
+    <script>
+        function word(){
+            let str = document.getElementById('string').value; 
+            let words = str.split(" ");
+            let short = words[0];
+            let long = words[0];
+            for(let i=1; i<words.length; i++){
+                if (words[i].length<short.length){
+                    short = words[i]
+                }
+            }
+            for(let i=1; i<words.length; i++){
+                if (words[i].length>long.length){
+                    long = words[i]
+                }
+            }
+            document.getElementById("short").innerHTML = "Shortest Word: "+short;
+            document.getElementById("long").innerHTML = "Longest Word: "+long;
+        }
+
+        function calculate(){
+            var weight = parseFloat(document.getElementById('weight').value);
+            var height = parseFloat(document.getElementById('height').value);
+            let bmi = weight/(height*height)
+            document.getElementById('score').innerHTML = bmi;
+            if (bmi<18){
+                document.getElementById('type').innerHTML = "Underweight";
+            }
+            else if (bmi>18 && bmi<25){
+                document.getElementById('type').innerHTML = 'Normal';
+            }
+            else if (bmi>25 && bmi<30){
+                document.getElementById('type').innerHTML = 'Overweight';
+            }
+            else{
+                document.getElementById('type').innerHTML = 'Obese';
+            }
+        }
+        function grow() {
+        var r = parseInt(document.getElementById("rows").value);
+        var c = parseInt(document.getElementById("columns").value);
+        var l = ["pics/f1.png", "pics/f2.png", "pics/f3.png"];
+        var garden = document.getElementById("garden");
+        
+        for (let i = 0; i < r; i++) {
+            for (let j = 0; j < c; j++) {
+                var fruit = Math.floor(Math.random() * 3);
+                var img = '<img src=' + l[fruit] + ' width = "100px" height = "100px"></img>';
+                garden.innerHTML += img;
+            }
+            garden.innerHTML += "<br>";
+        }
+    }
+
+        function convert(){
+            var index1 = document.getElementById('from').selectedIndex;
+            var value1 = document.getElementById('from')[index1].value;
+            var index2 = document.getElementById('to').selectedIndex;
+            var value2 = document.getElementById('to')[index2].value;
+            let value = parseFloat(document.getElementById('data').value)
+            if (value1 === 'IR' && value2 === "UD"){
+                let r = value*0.015
+                document.getElementById('answer').innerHTML = '$' + r 
+            } 
+            else if (value1 === 'UD' && value2 === "IR"){
+                let r = value*67.12
+                document.getElementById('answer').innerHTML = 'Rs. ' + r 
+            }
+            else if (value1 === 'IR' && value2 === "IR"){
+                let r = value*1
+                document.getElementById('answer').innerHTML = 'Rs. ' + r 
+            }
+            else {
+                let r = value*1
+                document.getElementById('answer').innerHTML = '$' + r 
+            }
+        }
+        function flip(){
+            var img = document.getElementById("coin");
+            var head = document.getElementById("num_heads");
+            var tail = document.getElementById("num_tails");
+            var h = parseInt(head.innerHTML);
+            var t = parseInt(tail.innerHTML);
+
+            var l = ["c5.png", "c3.png"];
+            var s = Math.floor(Math.random()*2);
+            if (l[s]==l[0]) {
+                head.innerHTML = h+1;
+            } else {
+                tail.innerHTML = t+1;
+            };
+            img.src = "pics/"+l[s];
+
+        }
+        function bill() {
+        var half = parseInt(document.getElementById("small").value);
+        var one = parseInt(document.getElementById("medium").value);
+        var two = parseInt(document.getElementById("large").value);
+        var total;
+
+        var small = 100;
+        var medium = 200;
+        var large = 400;
+
+        total = (half*small) + (one*medium) + (two*large);
+        var tax = 0.09 * total;
+        total += tax;
+
+        var radio = document.getElementsByName("tip");
+        var tip;
+        for (var i = 0; i < radio.length; i++) {
+            if (radio[i].checked) tip = ((radio[i].value)/100)*total;
+        }
+        total += tip;
+
+        document.getElementById("price").innerHTML = "Total: " + "Rs." +total      
+}
+
+    </script>
+</head>
+<body>
+    <center><h1>Javascript Dom Elements</h1></center> 
+    <div>
+    <h2>Shortest and Longest word</h2>
+    <p>Enter a string: </p>
+    <input type="text" id="string" >
+    <button onclick="word()">Result</button>
+    <p id="short"></p>
+    <p id="long"></p>
+    </div>
+    <hr>
+    <div>
+        <h2>BMI Calculator</h2>
+        <h4>Calculate your Body Mass Index (BMI)!</h4>
+        <fieldset>
+            Weight(in kg): <input type="text" id="weight"><br><br>
+            Height(in m): <input type="text" id="height"><br><br>
+            <button onclick="calculate()">Get BMI</button>
+        </fieldset>
+        <p>
+            BMI: <span id="score"></span><br>
+            Body Type: <span id="type"></span><br>
+        </p>
+    </div>
+    <hr>
+    <div>
+        <h2 >Fruit Farm</h2>
+        <fieldset>
+            <div>
+                Rows: <input type="text" id="rows"><br><br>
+                Columns: <input type="text" id="columns"><br><br>
+                <button onclick="grow()">Plant Garden</button>
+            </div><br> 
+        </fieldset>
+        <div id="garden"></div>
+    </div>
+    <hr>
+    <div>
+        <h2 >Currency Converter</h2>
+        <fieldset>
+            Convert <input type="text" id="data"> <br> <br>
+            <select name="" id="from">
+                <option value="IR">Indian Rupee</option>
+                <option value="UD">US Dollar</option>
+            </select>
+            to
+            <select id="to">
+                <option value="IR">Indian Rupee</option>
+                <option value="UD">US Dollar</option>
+            </select><br><br>
+            <button onclick="convert()">Calculate</button>
+            <br><br>
+            <span id="answer"></span>
+        </fieldset>
+    </div>
+    <hr>
+    <div>
+        <h2 >Coin Flip</h2>
+        <fieldset>
+            <legend><h4>Heads or Tails?</h4></legend>
+            <div>
+                <figure><img src="pics/c5.png" onclick="flip()" id="coin" height="300px" width="300px"><br>
+                <figcaption style="position: relative; left: 95px;"><small>Click image to toss!</small></figcaption></figure>
+            </div></span>
+            <p> 
+                Total Heads: <span id="num_heads">0</span><br><br>
+                Total Tails: <span id="num_tails">0</span><br><br>
+            </p>
+        </fieldset>
+    </div>
+    <div>
+        <h2>Birthday Cake Order Form</h2>
+        <fieldset>
+            <ul>
+                <li>1/2kg Cakes:&nbsp; <input type="text" id="small"><br><br></li>
+                <li>1kg Cakes:&nbsp; <input type="text" id="medium"><br><br></li>
+                <li>2kg Cakes:&nbsp; <input type="text" id="large"><br><br> </li>
+            </ul> 
+            Tip: 
+            <label><input type="radio" value="10" name="tip" checked="checked">10%</label> 
+            <label><input type="radio" value="15" name="tip">15%</label>
+            <label><input type="radio" value="20" name="tip">20%</label><br><br> 
+            <button id="submit" onclick="bill()">bill</button><br><br>
+            <span id="price"></span><br><br>
+        </fieldset>
+    </div>
+</body>
+</html>
