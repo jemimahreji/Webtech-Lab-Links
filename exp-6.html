@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timer Functions and Objects</title>
+    <script>
+      function display() {
+        var d = new Date();
+        var h = d.getHours();
+        var m = d.getMinutes();
+        var s = d.getSeconds();
+        // h = digits(h);
+        m = digits(m);
+        s = digits(s);
+        t = document.getElementById("time");
+        t.innerHTML = h + ":" + m + ":" + s;
+      }
+      function digits(x) {
+        if (x < 10) {
+          x = "0" + x;
+          return x;
+        }
+        return x;
+      }
+      setInterval("display()", 1000);
+
+      function setBgColor() {
+        var red = Math.floor(Math.random() * 255);
+        var blue = Math.floor(Math.random() * 255);
+        var green = Math.floor(Math.random() * 255);
+        var color = "rgb(" + red + "," + green + "," + blue + ")";
+        document.getElementsByTagName("body")[0].style =
+          "background-color:" + color;
+      }
+      setInterval("setBgColor()", 2000);
+
+      function incSize() {
+        document.getElementById("para").style = "font-size: 25px;";
+      }
+      function decSize() {
+        document.getElementById("para").style = "font-size: 15px;";
+      }
+    </script>
+  </head>
+  <body>
+    <center><h1>Timer Functions and Objects</h1></center>
+    <div>
+      <h2 style="color: white">Digital Clock</h2>
+      <span id="time" style="border: 2px solid black; padding: 10px"></span>
+    </div>
+    <br />
+    <hr />
+    <div>
+      <h2 style="color: white">Dynamic Background</h2>
+      <h4>Your background colour will change for every 30 seconds.</h4>
+    </div>
+    <br />
+    <hr />
+    <div>
+      <h2 style="color: white">Onmouseover event handler</h2>
+      <p id="para" onmouseover="incSize()" onmouseout="decSize()">
+        One can define social media as a group of networking sites or
+        applications where people can share their thoughts, ideas and opinions.
+        In the past couple of decades, massive advancements in technology have
+        enabled individuals to connect with each other using social media sites.
+        Social media sites have replaced conventional or traditional modes of
+        communication and facilitated an increase in employment opportunities.
+      </p>
+    </div>
+    <br />
+    <hr />
+    <div>
+      <h2 style="color: white">Positioning an object</h2>
+      <button onclick="move()">move</button>
+      <button onclick="stop()">stop</button>
+      <img
+        id="car"
+        src="exp pics/car.png"
+        style="width: 300px"
+        alt=""
+      /><br /><br />
+      <script>
+        function init() {
+          imgObj = document.getElementById("car");
+          imgObj.style.position = "relative";
+          imgObj.style.left = "0px";
+        }
+        function move() {
+          imgObj.style.left = parseInt(imgObj.style.left) + 1 + "px";
+          animate = setTimeout("move()", 10);
+        }
+        function stop() {
+          clearTimeout(animate);
+          imgObj.style.left = "0px";
+        }
+        window.onload = init();
+      </script>
+    </div>
+    <br />
+    <hr />
+    <div>
+      <h2 style="color: white">Class-objects</h2>
+      <fieldset>
+        <h3>Student details</h3>
+        <p id="student"></p>
+        <p id="dobAfter"></p>
+        <p id="dobBefore"></p>
+      </fieldset>
+
+      <script>
+        var list = document.getElementById("student");
+        let before = "";
+        let after = "";
+        var students = [
+          { name: "Jemi", regno: "3024", dob: "03-dec-2001" },
+          { name: "Janice", regno: "4023", dob: "05-nov-2002" },
+          { name: "Jeffy", regno: "3052", dob: "12-june-1999" },
+        ];
+        for (var i = 0; i < students.length; i++) {
+          let name = students[i].name;
+          let reg = students[i].regno;
+          let dob = students[i].dob;
+
+          dob_slice = dob.slice(7, 11);
+          year = parseInt(dob_slice);
+          if (year < 2000) {
+            before += name + "'s Register number is " + reg + "<br>";
+          } else if (year > 2000) {
+            after += name + "'s Register number is " + reg + "<br>";
+          }
+        }
+        document.getElementById("dobBefore").innerHTML =
+          "<b> Students having dob year before 2000 </b> <br>" + before;
+        document.getElementById("dobAfter").innerHTML =
+          "<b> Students having dob year after 2000 </b> <br>" + after;
+      </script>
+    </div>
+  </body>
+</html>

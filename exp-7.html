@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jquery</title>
+    <link rel="stylesheet" href="exp7.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="exp7.js"></script>
+  </head>
+  <body>
+    <h1><center>Working with Jquery</center></h1>
+    <div class="container">
+      <div class="items">
+        <center><h2>Registration form</h2></center>
+        Name: <input class="input" id="name" type="text" /><br /><br />
+        Mobile No.: <input id="num" class="input" type="text" /> <br /><br />
+        Email:
+        <input id="email" class="input" type="text" /><br /><br />
+        DOB: <input id="dob" class="input" type="date" /><br /><br />
+        Gender:
+        <input type="radio" id="male" name="gender" value="male" />
+        Male
+        <input type="radio" id="female" name="gender" value="female" />
+        Female <br /><br />
+        <button id="sbt">Submit</button>
+      </div>
+      <div class="items" id="output">
+        <!-- <center><h2>User Info</h2></center> -->
+        <p id="para1"></p>
+      </div>
+    </div>
+    <hr />
+    <center><h2>Car body Workshop</h2></center>
+    <div>
+      <div style="display: inline-block; border: 20px solid rgb(221, 249, 255)">
+        <img id="car" src="exp pics/car1.png" alt="" />
+      </div>
+      <h3
+        style="
+          display: inline-block;
+          position: relative;
+          bottom: 270px;
+          left: 50px;
+        "
+      >
+        Change colour
+      </h3>
+      <div
+        style="
+          display: inline-block;
+          position: relative;
+          bottom: 270px;
+          left: 70px;
+        "
+      >
+        <button
+          class="bt"
+          id="bt1"
+          style="border-color: grey; background-color: rgba(17, 16, 16, 0.229)"
+        >
+          grey
+        </button>
+        <button
+          class="bt"
+          id="bt2"
+          style="border-color: blue; background-color: rgb(216, 216, 247)"
+        >
+          blue
+        </button>
+        <button
+          class="bt"
+          id="bt3"
+          style="border-color: yellow; background-color: rgb(247, 247, 201)"
+        >
+          yellow
+        </button>
+        <button
+          class="bt"
+          id="bt4"
+          style="border-color: green; background-color: rgb(217, 248, 217)"
+        >
+          green
+        </button>
+      </div>
+      <h3
+        style="
+          display: inline-block;
+          position: relative;
+          bottom: 200px;
+          right: 450px;
+        "
+      >
+        Change wheel size
+      </h3>
+      <button id="sizeincbt">increase</button>
+      <button id="sizedecbt">decrease</button>
+      <img
+        id="t1"
+        src="exp pics/w2.svg"
+        alt=""
+        style="position: relative; width: 100px; left: 47px; bottom: 157px"
+      />
+      <img
+        id="t2"
+        src="exp pics/w2.svg"
+        alt=""
+        style="position: relative; width: 100px; left: 279px; bottom: 156px"
+      />
+    </div>
+  </body>
+</html>

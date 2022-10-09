@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fitness club</title>
+  </head>
+  <style>
+    #header {
+      background-image: url("exp2 pics/fit10.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: white;
+    }
+    .label {
+      padding: 30px;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      font-size: 18px;
+    }
+    #register {
+      position: relative;
+      left: 100px;
+      background-color: azure;
+      width: 465px;
+      height: 400px;
+      border-radius: 5px;
+      top: 40px;
+      padding: 30px;
+      font-weight: 500;
+    }
+    #vid {
+      position: relative;
+      left: 715px;
+      bottom: 355px;
+    }
+    #benefits {
+      position: relative;
+      margin: 50px;
+      bottom: 350px;
+    }
+    #benefits-head {
+      position: relative;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 35px;
+      font-family: "Georgia, " Times New Roman ", Times, serif", sans-serif;
+    }
+    #para1 {
+      position: relative;
+      width: 400px;
+      background-image: url("exp2 pics/fit4.jpg");
+      color: aliceblue;
+      opacity: 0.8;
+      border-radius: 6px;
+      padding: 20px;
+    }
+    #para2 {
+      position: relative;
+      width: 400px;
+      left: 504px;
+      bottom: 161px;
+      background-image: url("exp2 pics/fit4.jpg");
+      color: aliceblue;
+      opacity: 0.8;
+      border-radius: 6px;
+      padding: 20px;
+    }
+    #para3 {
+      position: relative;
+      width: 400px;
+      left: 991px;
+      bottom: 320px;
+      background-image: url("exp2 pics/fit4.jpg");
+      color: aliceblue;
+      opacity: 0.8;
+      border-radius: 6px;
+      padding: 20px;
+    }
+    .sub-head {
+      position: relative;
+    }
+    #map {
+      position: relative;
+      margin: 100px;
+      bottom: 600px;
+      background-image: url("exp2 pics/fit6.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    #para4 {
+      position: relative;
+      left: 881px;
+      bottom: 960px;
+      width: 450px;
+      font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      font-weight: 900;
+      font-size: 50px;
+      color: rgb(255, 255, 255);
+      background-color: black;
+      opacity: 0.8;
+      padding: 15px;
+    }
+    #para5 {
+      position: relative;
+      left: 460px;
+      bottom: 726px;
+      width: 600px;
+      font-style: oblique;
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      font-size: 70px;
+    }
+    #nav-footer {
+      position: relative;
+      left: 50px;
+      bottom: 580px;
+      width: 1348px;
+      background-image: url("exp2 pics/fit7.jpg");
+      padding: 25px;
+      border-radius: 7px;
+    }
+    .a {
+      padding: 30px;
+      border: 2px;
+      color: rgb(243, 243, 148);
+      font-size: 18px;
+    }
+  </style>
+  <body
+    style="background-image: url('pics/fit1.jpg'); background-repeat: repeat-y"
+  >
+    <header id="header">
+      <center>
+        <h1
+          style="
+            font-size: 40px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+          "
+        >
+          Fitness Freak Classes
+        </h1>
+        <h3 style="font-size: 20px; font-style: oblique">
+          Do healthy be healthy
+        </h3>
+      </center>
+    </header>
+    <div id="register">
+      <h3 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">
+        Register Here!
+      </h3>
+      <form>
+        <fieldset style="width: 430px">
+          <label class="label" for="firstname">First Name: </label>
+          <input type="text" /><br /><br />
+          <label class="label" for="lastname">Lasr Name: </label>
+          <input type="text" /><br /><br />
+          <label class="label" for="phone">Mobile No.: </label>
+          <input type="tel" /><br /><br />
+          <label class="label" for="age">Age: </label>
+          <input
+            type="number"
+            min="18"
+            max="40"
+            style="position: relative; left: 48px"
+          />
+          <br /><br />
+          <label class="label" for="gender">Gender</label>
+          <input type="radio" name="gender" value="male" />
+          <label class="label" for="male">Male</label>
+          <input type="radio" name="gender" value="female" />
+          <label class="label" for="female">Female</label><br /><br />
+          <label class="label" for="address">Address:</label>
+          <textarea
+            name="address"
+            cols="35"
+            rows="6"
+            style="position: relative"
+          >
+          </textarea>
+        </fieldset>
+      </form>
+    </div>
+    <div id="vid">
+      <video width="700" height="400" controls autoplay>
+        <source src="fit exp2.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div id="benefits">
+      <center><h2 id="benefits-head">Benefits</h2></center>
+      <section id="para1">
+        <center><h3 class="sub-head">Workout Anywhere</h3></center>
+        <p>
+          Attend your favourite workout sessions at the best gyms and fitness
+          studio near your home, office and more with your fitness-Freak
+        </p>
+      </section>
+      <section id="para2">
+        <center><h3 class="sub-head">Workout Anytime</h3></center>
+        <p>
+          Attend any or multiple sessions at any center(s) in a day at your
+          convenience
+        </p>
+      </section>
+      <section id="para3">
+        <center><h3 class="sub-head">Workout Anyhow</h3></center>
+        <p>
+          Yoga, zumba, Pilates, Swimming, Gym workout, MMa, CrossFit, Spinning-
+          you name it, you have it with your fitness freak
+        </p>
+      </section>
+    </div>
+    <div id="map">
+      <h2 style="color: white">Location to our center</h2>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125350.50729394052!2d76.68389739808528!3d10.948006205093321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba85fc423f9291f%3A0xc74b476ee42af8ed!2sTHE%20OLYMPIAN%20FITNESS%20CLUB!5e0!3m2!1sen!2sin!4v1658659440474!5m2!1sen!2sin"
+        width="700"
+        height="450"
+        style="border: 1"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+    <div id="para4">
+      <p>India's Largest Fitness network</p>
+    </div>
+    <div id="para5">
+      <center><p>To help you achieve your goals</p></center>
+    </div>
+    <div id="nav-footer">
+      <a href="https://fitpass.co.in/contact" class="a">Contact Us</a>
+      <a href="https://fitpass.co.in/partners" class="a">Become a partner</a>
+      <a href="https://fitpass.co.in/careers" class="a">Careers</a>
+      <a href="https://fitpass.co.in/site-map" class="a">sitemap</a>
+      <a href="#header" class="a">Go back to title</a>
+      <a href="#register" class="a">Go back to form</a>
+      <a href="#benefits" class="a">Go back to benefits</a>
+      <a href="#map" class="a">Go back to location</a>
+    </div>
+  </body>
+</html>
