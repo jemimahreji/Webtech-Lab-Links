@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script>
+      var app = angular.module("commentBox", []);
+      app.controller("commentCtrl", function ($scope) {
+        $scope.comments = [];
+        $scope.add = function () {
+          if ($scope.text != "") {
+            $scope.comments.push($scope.text);
+            $scope.text = "";
+          }
+        };
+      });
+    </script>
+  </head>
+  <body>
+    <h2>Simple Comment box</h2>
+    <div ng-app="commentBox" ng-controller="commentCtrl">
+      <h3>Post Your Comment</h3>
+      <form>
+        <textarea
+          ng-model="text"
+          placeholder="Your Comment"
+          style="width: 550px"
+        ></textarea
+        ><br /><br />
+        <button ng-click="add()" style="padding: 10px">Post Comment</button>
+        <h4>Comments</h4>
+        <ul>
+          <li ng-repeat="c in comments">{{c}}</li>
+        </ul>
+      </form>
+    </div>
+  </body>
+</html>

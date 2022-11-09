@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Angular Js</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <script>
+      var app = angular.module("myapp", ["ngRoute"]);
+      app.config(function ($routeProvider) {
+        $routeProvider
+          .when("/marks", {
+            templateUrl: "marks.html",
+          })
+          .otherwise({ redirectTo: "/" });
+      });
+    </script>
+  </head>
+  <body ng-app="myapp">
+    <!-- navbar -->
+    <div
+      style="
+        height: 60px;
+        border: 2px solid rgb(161, 161, 239);
+        background: rgb(161, 161, 239);
+        padding: 12px;
+      "
+    >
+      <a
+        style="
+          color: white;
+          text-decoration: none;
+          font-weight: 600;
+          font-size: 18px;
+          margin-right: 100px;
+        "
+        href="#/!"
+        >Login Page</a
+      >
+      <a
+        style="
+          color: white;
+          text-decoration: none;
+          font-weight: 600;
+          font-size: 18px;
+          margin-right: 100px;
+        "
+        href="#!marks"
+        >Marks</a
+      >
+    </div>
+    <div ng-view></div>
+    <!-- form -->
+    <h1><center>Student Login</center></h1>
+    <div>
+      <form name="myform">
+        <fieldset style="padding: 20px">
+          <legend>Enter Your details</legend>
+          First Name:
+          <input type="text" name="fname" ng-model="firstname" required />
+          <span
+            style="color: red"
+            ng-show="myform.fname.$dirty && myform.fname.$error.required"
+          >
+            First name is required. </span
+          ><br /><br />
+          Last Name:
+          <input type="text" name="lname" ng-model="lastname" required />
+          <span
+            style="color: red"
+            ng-show="myform.lname.$dirty && myform.lname.$error.required"
+          >
+            Last name is required. </span
+          ><br /><br />
+          Register No.:
+          <input type="text" name="reg" ng-model="regno" required />
+          <span
+            style="color: red"
+            ng-show="myform.reg.$dirty && myform.reg.$error.required"
+          >
+            Register no. is required. </span
+          ><br /><br />
+          Enter Email:
+          <input type="email" name="email" ng-model="useremail" required />
+          <span
+            style="color: red"
+            ng-show="myform.email.$dirty && myform.email.$error.required"
+            >Email address is wrong</span
+          ><br /><br />
+          State:
+          <select ng-model="myVarState">
+            <option value="State"></option>
+            <option value="uttarpradesh">Uttar Pradesh</option>
+            <option value="chhattisgarh">Chhattisgarh</option>
+            <option value="kerala">Kerala</option>
+            <option value="tamilnadu">Tamil Nadu</option>
+            <option value="westbengal">West Bengal</option>
+            <option value="assam">Assam</option></select
+          ><br /><br />
+          Gender:
+          <input type="radio" ng-model="myVar" value="male" />Male
+          <input type="radio" ng-model="myVar" value="female" />Female
+          <br /><br />
+          <button
+            ng-disabled="myform.fname.$invalid || myform.email.$invalid || myform.lname.$invalid || myform.reg.$invalid"
+            ng-click="submit()"
+          >
+            Save Data
+          </button>
+        </fieldset>
+      </form>
+    </div>
+    <div ng-switch="myVarState">
+      <div ng-switch-when="assam">State: Uttar Prdesh</div>
+      <div ng-switch-when="assam">State: Chhattisgarh</div>
+      <div ng-switch-when="assam">State: Kerala</div>
+      <div ng-switch-when="assam">State: Tamil Nadu</div>
+      <div ng-switch-when="assam">State: West Bengal</div>
+      <div ng-switch-when="assam">State: Assam</div>
+    </div>
+    <div
+      style="
+        border: 2px dashed rgb(96, 38, 240);
+        margin-top: 20px;
+        padding: 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: rgb(239, 239, 255);
+      "
+    >
+      <h2>Displaying Student Details</h2>
+      Name: {{firstname}} {{lastname}} <br />
+      Register Number: {{regno}} <br />
+      Email: {{useremail}} <br />
+      Gender:
+      <div ng-switch="myVar">
+        <div ng-switch-when="male" style="display: inline-block">
+          <span>Male</span>
+        </div>
+        <div ng-switch-when="female" style="display: inline-block">
+          <span>Female</span>
+        </div>
+        <br />
+        State: {{myVarState}}
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script>
+      var app1 = angular.module("CalculatorBMI", []);
+      app1.controller("BmiCntrl", function ($scope) {
+        $scope.result = function () {
+          $scope.bmi = $scope.w / ($scope.h * $scope.h);
+          return Math.round($scope.bmi);
+        };
+      });
+    </script>
+  </head>
+  <body>
+    <div ng-app="CalculatorBMI" ng-controller="BmiCntrl">
+      <center><h1>Simple programs using Angular Js</h1></center>
+      <h2>BMI Calculator</h2>
+      <p>Weight(in kg):<input type="number" ng-model="w" /></p>
+      <p>Height(in m):<input type="number" ng-model="h" /></p>
+      <h3><p>BMI Result: {{result()}}</p></h3>
+    </div>
+  </body>
+</html>
